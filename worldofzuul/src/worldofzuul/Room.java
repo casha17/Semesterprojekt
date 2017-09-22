@@ -21,7 +21,7 @@ public class Room
         exits = new HashMap<String, Room>();
     }
 
-    // test
+    
     public void setExit(String direction, Room neighbor) 
     {
         exits.put(direction, neighbor);
