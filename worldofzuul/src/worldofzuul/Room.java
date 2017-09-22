@@ -11,7 +11,7 @@ import java.util.Iterator;
  */
 public class Room
 {
-    //test
+    
     private String description;
     private HashMap<String, Room> exits;
 
