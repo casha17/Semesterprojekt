@@ -20,7 +20,7 @@ public class CommandWords // dasds
             }
         }
     }
-
+  
     public CommandWord getCommandWord(String commandWord)
     {
         CommandWord command = validCommands.get(commandWord);

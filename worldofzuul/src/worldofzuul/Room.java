@@ -12,6 +12,7 @@ import java.util.Iterator;
 public class Room
 {
     
+    // test
     private String description;
     private HashMap<String, Room> exits;
 
@@ -19,6 +20,8 @@ public class Room
     {
         this.description = description;
         exits = new HashMap<String, Room>();
+        
+        
     }
 
     
