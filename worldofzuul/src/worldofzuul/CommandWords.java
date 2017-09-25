@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @version 2006.03.30
  */
 
-public class CommandWords
+public class CommandWords // dasds
 {
     private HashMap<String, CommandWord> validCommands;
 
