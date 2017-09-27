@@ -5,7 +5,7 @@ package worldofzuul;
  * @version 2006.03.30
  */
 
-public class Command
+public class Command //TEST
 {
     private CommandWord commandWord;
     private String secondWord;
