@@ -4,7 +4,7 @@ package worldofzuul;
  * @author Michael Kolling and David J. Barnes
  * @version 2006.03.30
  */
-public enum CommandWord
+public enum CommandWord // A class of the type enum. Enum still unknown. 
 {
     GO("go"), QUIT("quit"), HELP("help"), UNKNOWN("?");
     
