@@ -9,13 +9,17 @@ import java.util.Iterator;
  * @author  Michael Kolling and David J. Barnes
  * @version 2006.03.30
  */
+/*
+Each "Room" represents a location in the game and is connected to other rooms via exits. 
+*/
 public class Room
 {
     
-    // test
-    private String description;
-    private HashMap<String, Room> exits;
-
+   
+    private String description; 
+    private HashMap<String, Room> exits; //Stores exits of this room
+	/*Create a room described "description".
+	*/
     public Room(String description) 
     {
         this.description = description;
@@ -23,18 +27,27 @@ public class Room
         
         
     }
-
-    
-    public void setExit(String direction, Room neighbor) 
+  
+    /* Defines the exit of the particular room
+    Direction: Direction of the exit
+    Neighbor: The room connected to this one in the given direction
+    */
+    public void setExit(String direction, Room neighbor)
+   
     {
         exits.put(direction, neighbor);
     }
-
+/* Description of the room
+    
+    */
     public String getShortDescription()
     {
         return description;
     }
-
+    /* Describes which room you are in and where the exit is.
+    ex. "You are in a lecture theatre
+        Exits: west"
+    */
     public String getLongDescription()
     {
         return "You are " + description + ".\n" + getExitString();
@@ -42,6 +55,10 @@ public class Room
 
 	private String getExitString()
     {
+        /* Returns a string describing the available exits
+        ex. "Exits: west south"
+        
+        */
         String returnString = "Exits:";
         Set<String> keys = exits.keySet();
         for(String exit : keys) {
@@ -49,7 +66,10 @@ public class Room
         }
         return returnString;
     }
+/* Returns the room that is reached if we go from this room in direction,
+        "direction". If there is no room, return null. 
 
+        */
     public Room getExit(String direction) 
     {
         return exits.get(direction);
